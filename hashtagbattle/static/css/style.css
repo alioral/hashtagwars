@@ -1,0 +1,80 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:14px;
+  color:#FFF;
+}
+#main {
+  width:800px;
+  min-height:200px;
+  margin:0 auto;
+}
+#hashtag_area {
+  width:500px;
+  height:200px;
+  margin:10px auto;
+}
+#hashtag_list {
+  list-style-type:none;
+  padding:0;
+}
+#hashtag_list li{
+  border-bottom:6px solid #900000;
+  margin-bottom:10px;
+  background-color:#ff5349;
+  padding:1px;
+}
+#inner_list {
+  margin:10px;
+  padding:0;
+}
+#inner_list h1 {
+  /*color:#22A7F0;*/
+}
+#inner_list b {
+  /*color:#ABB7B7;*/
+}
+#count {
+  /*color:#6C7A89;*/
+  font-size:32px;
+  font-weight:300;
+}
+
+#error_area {
+  font-size:20px !important;
+  font-weight:700;
+  color:#FFF;
+  text-align:center;
+  padding:5px;
+  background-color:#CF000F;
+  border-radius:4px;
+}
+
+#hashtag_bar {
+  border:none;
+  outline:none;
+  font-size:26px;
+  border:1px solid #C0C0C0;
+  padding:10px;
+  border-radius:4px;
+  width:600px;
+  margin:10px auto;
+}
+#logo {
+  display:block;
+  margin:0 auto;
+}
+#add_button {
+  border:none;
+  outline:none;
+  height:50px;
+  width:80px;
+  border-radius:4px;
+  font-weight:700;
+  font-family:'Source Sans Pro', sans-serif;
+  font-size:18px;
+  background-color:#2fc2c7;
+  color:#FFF;
+}
+#text_area {
+  margin:0 auto;
+}

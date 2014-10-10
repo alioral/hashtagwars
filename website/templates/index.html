@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hashtag Wars</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="{% static 'scripts/jquery-1.11.1.min.js' %}"></script>
+  <script type="text/javascript">
+  var hashtagView;
+
+  function createHashtag() {
+    var hashtag = $('#hashtag_bar').val();
+    var hashtagModel = new HashtagModel({hashtag:hashtag});
+    hashtagView.addHashtag(hashtagModel);
+    $('#hashtag_bar').val('');
+  }
+
+  $(document).ready(function() {
+    hashtagView = new HashtagView();
+    $('body #hashtag_list').append(hashtagView.render().$el);
+    $('#error_area').hide();
+    console.log('Function triggered');
+  });
+  </script>
+</head>
+<body>
+  <script type="text/javascript" src="{% static 'scripts/underscore-min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/backbone-min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/hashtag.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/input.js' %}"></script>
+  <div id="main">
+    <img id="logo" src="{% static 'images/logo3.png' %}">
+    <div id="error_area">
+      <p>We are experiencing a problem with the server. Please don't go away!</p>
+    </div>
+    <table id="text_area">
+      <tr>
+        <td>
+          <input id="hashtag_bar" type="text" placeholder="#AddAnHashtagForBattle!"/>
+        </td>
+        <td>
+          <input type="button" id="add_button" onClick="createHashtag()" value="ADD"/>
+        </td>
+      </tr>
+    </table>
+    <div id="hashtag_area">
+      <ul id="hashtag_list">
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
